@@ -1,0 +1,237 @@
+{
+  "front-version": "2.19.1",
+  "version": 3,
+  "nodes": [
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "username",
+              "value": ""
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "password",
+              "value": ""
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "getauth",
+              "value": "1"
+            },
+            {
+              "enabled": true,
+              "name": "logout",
+              "value": "1"
+            }
+          ]
+        },
+        "scheme": {
+          "secure": true,
+          "name": "https",
+          "version": "V11"
+        },
+        "host": "api.pcloud.com",
+        "path": "/userinfo"
+      },
+      "id": "9792075d-69fe-42f2-85ef-3d7db1451f35",
+      "lastModified": "2019-04-08T03:11:35.196+09:00",
+      "name": "auth",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {},
+      "parentId": "57a8c296-4e78-4401-b9dc-f61e03d849f7"
+    },
+    {
+      "type": "Project",
+      "id": "57a8c296-4e78-4401-b9dc-f61e03d849f7",
+      "lastModified": "2019-04-08T03:11:55.589+09:00",
+      "name": "p"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "application/x-www-form-urlencoded",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "auth",
+              "value": ""
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "folderid",
+              "value": "1855971723"
+            },
+            {
+              "type": "Text",
+              "name": "filename",
+              "value": ""
+            },
+            {
+              "type": "Text",
+              "name": "folderid",
+              "value": "1"
+            },
+            {
+              "type": "Text",
+              "name": "path",
+              "value": "/hoge"
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "name",
+              "value": "tmp1"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": []
+        },
+        "scheme": {
+          "secure": true,
+          "name": "https",
+          "version": "V11"
+        },
+        "host": "api.pcloud.com",
+        "path": "/createfolderifnotexists"
+      },
+      "id": "0de5e03b-6eb4-438b-99cf-8c02bbb947e0",
+      "lastModified": "2019-04-08T03:11:55.589+09:00",
+      "name": "createfolder",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "application/x-www-form-urlencoded"
+        }
+      ],
+      "metaInfo": {
+        "IS_FROM_HISTORY": "6482526c-9193-4328-84a7-4250ecdbda8a"
+      },
+      "parentId": "57a8c296-4e78-4401-b9dc-f61e03d849f7"
+    },
+    {
+      "type": "Request",
+      "method": {
+        "requestBody": true,
+        "link": "http://tools.ietf.org/html/rfc7231#section-4.3.3",
+        "name": "POST"
+      },
+      "body": {
+        "formBody": {
+          "overrideContentType": true,
+          "encoding": "multipart/form-data",
+          "items": [
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "auth",
+              "value": ""
+            },
+            {
+              "enabled": true,
+              "type": "Text",
+              "name": "filename",
+              "value": ""
+            },
+            {
+              "type": "Text",
+              "name": "filename",
+              "value": ""
+            },
+            {
+              "type": "Text",
+              "name": "folderid",
+              "value": "1"
+            },
+            {
+              "type": "Text",
+              "name": "path",
+              "value": "/hoge"
+            }
+          ]
+        },
+        "bodyType": "Form",
+        "autoSetLength": true
+      },
+      "headersType": "Form",
+      "uri": {
+        "query": {
+          "delimiter": "&",
+          "items": [
+            {
+              "enabled": true,
+              "name": "path",
+              "value": "/share"
+            }
+          ]
+        },
+        "scheme": {
+          "secure": true,
+          "name": "https",
+          "version": "V11"
+        },
+        "host": "api.pcloud.com",
+        "path": "/uploadfile"
+      },
+      "id": "f0814121-469a-49e1-9594-40e72d431da2",
+      "lastModified": "2019-04-08T03:11:52.809+09:00",
+      "name": "upload",
+      "headers": [
+        {
+          "enabled": true,
+          "name": "Content-Type",
+          "value": "multipart/form-data"
+        }
+      ],
+      "metaInfo": {
+        "IS_FROM_HISTORY": null
+      },
+      "parentId": "57a8c296-4e78-4401-b9dc-f61e03d849f7"
+    }
+  ]
+}
